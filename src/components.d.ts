@@ -13,7 +13,6 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TabViews: typeof import('./components/tab-views.vue')['default']
-    TagsVies: typeof import('./components/tags-vies/index.vue')['default']
     Talk: typeof import('./views/talk/index.vue')['default']
     Toilet: typeof import('./views/toilet/index.vue')['default']
     VanTabbar: typeof import('vant/es')['Tabbar']

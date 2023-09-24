@@ -19,10 +19,23 @@ export default defineConfig({
   ],
   build: { target: 'es2016', sourcemap: true },
   server: {
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 8080,
     open: true,
     hmr: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000/api',
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        changeOrigin: true,
+        bypass(req, res, options) {
+          let reqUrl = options.rewrite!(req.url as string);
+          let targetUrl = options.target as string;
+          const proxyUrl = new URL(reqUrl, targetUrl)?.href || '';
+          console.log('proxyUrl', proxyUrl);
+        },
+      },
+    },
   },
   resolve: {
     alias: {

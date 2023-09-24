@@ -1,9 +1,11 @@
 <template>
   <div>
     <div>
-      <transition>
-        <router-view></router-view>
-      </transition>
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component"></component>
+        </keep-alive>
+      </router-view>
     </div>
     <tab-views></tab-views>
   </div>

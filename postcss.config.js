@@ -1,5 +1,7 @@
 export const plugins = {
   'postcss-px-to-viewport': {
-    viewportWidth: 375,
+    viewportWidth: 750,
+    unitToConvert: 'px',
+    selectorBlackList: ['.ignore', 'van'],
   },
 };
