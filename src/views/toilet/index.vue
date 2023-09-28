@@ -13,6 +13,7 @@ onMounted(async () => {
   // 挂载时判断是否存在当前用户信息
   // 先暂时使用 模拟ID
   const mockId = '1111';
+  console.log('111');
   const userInfoRes = await userApi.getUserInfo({ userId: mockId });
   if (!userInfoRes.data) {
     router.push({ path: '/login' });

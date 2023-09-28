@@ -4,4 +4,11 @@ export const plugins = {
     unitToConvert: 'px',
     selectorBlackList: ['.ignore', 'van'],
   },
+  'postcss-pxtorem': {
+    rootValue: 37.5,
+    propList: ['*'],
+  },
+  autoprefixer: {
+    browsers: ['last 2 version'],
+  },
 };

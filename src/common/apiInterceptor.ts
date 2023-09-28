@@ -16,7 +16,7 @@ export const responseInterceptor = (response: AxiosResponse<ApiResponse>) => {
   if (response.data.rspCode === 200) {
     console.log('response', response);
     showLoadingToast;
-    return response.data.data;
+    return response.data;
   } else {
     showNotify({
       type: 'danger',

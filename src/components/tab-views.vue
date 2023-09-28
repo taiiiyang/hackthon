@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <van-tabbar v-model="active">
-      <van-tabbar-item icon="home-o" @click="toggleRoute('toilet')">
-        标签
-      </van-tabbar-item>
-      <van-tabbar-item icon="search" @click="toggleRoute('talk')">
-        标签
-      </van-tabbar-item>
-      <van-tabbar-item icon="friends-o" @click="toggleRoute('logistic')">
-        标签
-      </van-tabbar-item>
-    </van-tabbar>
-  </div>
+  <van-tabbar v-model="active">
+    <van-tabbar-item icon="home-o" @click="toggleRoute('toilet')">
+      找厕所
+    </van-tabbar-item>
+    <van-tabbar-item icon="search" @click="toggleRoute('talk')">
+      吐槽室
+    </van-tabbar-item>
+    <van-tabbar-item icon="friends-o" @click="toggleRoute('logistic')">
+      管理中心
+    </van-tabbar-item>
+  </van-tabbar>
 </template>
 
 <script setup lang="ts">
