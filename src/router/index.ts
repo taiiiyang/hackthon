@@ -33,6 +33,26 @@ const routes: RouteRecordRaw[] = [
         name: 'talk',
         component: () => import('@/views/talk/index.vue'),
       },
+      {
+        path: '/repair',
+        name: 'repair',
+        component: () => import('@/views/logistic/repair/index.vue')
+      },
+      {
+        path: '/help',
+        name: 'help',
+        component: () => import('@/views/logistic/help/index.vue')
+      },
+      {
+        path: '/info',
+        name: 'info',
+        component: () => import('@/views/logistic/info/index.vue')
+      },
+      {
+        path: '/introduction',
+        name: 'introduction',
+        component: () => import('@/views/logistic/introduction/index.vue')
+      }
     ],
   },
 ];

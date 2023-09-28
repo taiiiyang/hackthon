@@ -14,8 +14,8 @@ const request = axios.create({
 request.interceptors.request.use(requestInterceptor);
 request.interceptors.response.use(responseInterceptor);
 
-export const getApi = (url: string, params?: object) =>
-  request.get(url, params);
+export const getApi = <T>(url: string, params?: object) =>
+  request.get<T>(url, params);
 
-export const postApi = (url: string, params?: object) =>
-  request.get(url, params);
+export const postApi = <T>(url: string, params?: object) =>
+  request.get<T>(url, params);

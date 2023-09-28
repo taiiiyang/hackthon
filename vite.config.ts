@@ -4,7 +4,8 @@ import vue from '@vitejs/plugin-vue';
 import babel from 'vite-plugin-babel';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
-// https://vitejs.dev/config/
+import postCssPxToRem from 'postcss-pxtorem'; // https://vitejs.dev/config/
+import autoprefixer from 'autoprefixer';
 export default defineConfig({
   plugins: [
     vue(),
@@ -25,7 +26,7 @@ export default defineConfig({
     hmr: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000/api',
+        target: 'http://localhost:8000',
         rewrite: (path) => path.replace(/^\/api/, ''),
         changeOrigin: true,
         bypass(req, res, options) {
@@ -40,6 +41,26 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': join(__dirname, 'src'),
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [
+        postCssPxToRem({
+          rootValue: 37.5,
+          propList: ['*'],
+        }),
+        autoprefixer({
+          overrideBrowserslist: [
+            'Android 4.1',
+            'iOS 7.1',
+            'Chrome > 31',
+            'ff > 31',
+            'ie >= 8',
+            'last 4 versions',
+          ],
+        }),
+      ],
     },
   },
 });

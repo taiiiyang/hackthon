@@ -6,5 +6,6 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
+<style lang="scss">
+@import "styles/base.css";
 </style>

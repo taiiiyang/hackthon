@@ -5,7 +5,7 @@ const g_config = (window as any).g_config;
 
 const config = {
   dev: {
-    urlPrefix: 'http://192.168.0.58:8080',
+    urlPrefix: 'http://localhost:8080',
     assetsPrefix: '',
     platformKey: '',
     ssoBaseUrl: '',
