@@ -12,5 +12,14 @@ declare type GConfigGather = {
 declare type UserInfo = {
   gender: 0 | 1;
   floor: number;
-  userId: 'string';
+  userId: number;
+};
+
+// 分页统一响应体
+declare type FenyeResponse<T> = {
+  pageSize: number;
+  pageNum: number;
+  total: number;
+  totalPage: number;
+  data: T;
 };

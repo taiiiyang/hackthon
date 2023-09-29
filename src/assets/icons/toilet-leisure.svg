@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+  <g id="组_157" data-name="组 157" transform="translate(-96 -111)">
+    <rect id="矩形_149" data-name="矩形 149" width="39" height="39" rx="5" transform="translate(96 111)" fill="rgba(110,200,97,0.23)"/>
+    <circle id="Oval" cx="19.5" cy="19.5" r="19.5" transform="translate(96 111)" fill="#6cc75f" opacity="0.58"/>
+    <circle id="Oval-Copy" cx="15.114" cy="15.114" r="15.114" transform="translate(100.386 115.386)" fill="rgba(99,198,85,0.85)"/>
+    <path id="路径_34" data-name="路径 34" d="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.5,8.5,0,0,0,8.5,0Zm0,15.938A7.438,7.438,0,1,1,15.938,8.5,7.447,7.447,0,0,1,8.5,15.938ZM5.313,6.729m-1.063,0A1.063,1.063,0,1,0,5.313,5.666,1.063,1.063,0,0,0,4.25,6.729Zm7.438,0-1.063,0a1.063,1.063,0,1,0,1.063-1.063A1.063,1.063,0,0,0,10.625,6.729ZM8.5,13.459a3.541,3.541,0,0,0,3.541-3.541H4.959A3.541,3.541,0,0,0,8.5,13.459Z" transform="translate(107 122)" fill="#fff"/>
+  </g>
+</svg>

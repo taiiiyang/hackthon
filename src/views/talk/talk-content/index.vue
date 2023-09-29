@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
-import type { Comment, FenyeResponse } from '../talk-types';
+import type { Comment } from '../talk-types';
 import api from '@/views/talk/api';
 import { useUserStore } from '@/store/user';
 

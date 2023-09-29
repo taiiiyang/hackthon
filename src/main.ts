@@ -2,12 +2,14 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import VConsole from 'vconsole';
 import { Notify, Loading } from 'vant';
+import 'virtual:svg-icons-register';
 
 import router from '@/router';
 import 'vant/es/notify/style';
 
 import App from './App.vue';
-
+import 'vant/lib/index.css';
+import '@/styles/base.css';
 import { setFontSize } from '@/utils';
 
 const bootstrap = () => {

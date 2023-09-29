@@ -1,11 +1,13 @@
 import { defineConfig } from 'vite';
-import { join } from 'path';
+import path, { join } from 'path';
 import vue from '@vitejs/plugin-vue';
 import babel from 'vite-plugin-babel';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
 import postCssPxToRem from 'postcss-pxtorem'; // https://vitejs.dev/config/
 import autoprefixer from 'autoprefixer';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+
 export default defineConfig({
   plugins: [
     vue(),
@@ -17,6 +19,10 @@ export default defineConfig({
       dts: 'src/components.d.ts',
       deep: true,
     }),
+    createSvgIconsPlugin({
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+      symbolId: 'icon-[dir]-[name]',
+    }),
   ],
   build: { target: 'es2016', sourcemap: true },
   server: {
@@ -26,7 +32,7 @@ export default defineConfig({
     hmr: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'http://192.168.2.146:8000/',
         rewrite: (path) => path.replace(/^\/api/, ''),
         changeOrigin: true,
         bypass(req, res, options) {
