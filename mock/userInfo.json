@@ -1,0 +1,9 @@
+{
+	"rspCode": 200,
+	"rspDesc": "success",
+	"data": {
+		"gender": 1,
+		"role": "admin",
+		"floor": 10
+	}
+}

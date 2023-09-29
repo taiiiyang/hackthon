@@ -1,0 +1,90 @@
+{
+  "rspCode": 200,
+  "rspDesc": "success",
+  "data": {
+    "pageSize": 20,
+    "pageNum": 1,
+    "total": 24,
+    "totalPage": 2,
+    "data": [
+      {
+        "comment": "你好呀",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 1
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 0,
+        "likes": 20,
+        "commentId": 2
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 3
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 4
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 0,
+        "likes": 20,
+        "commentId": 5
+      },
+      {
+        "comment": "我不好",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 6
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 7
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 0,
+        "likes": 20,
+        "commentId": 8
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 9
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 10
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 11
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 0,
+        "likes": 20,
+        "commentId": 12
+      },
+      {
+        "comment": "你好呀",
+        "thumb": 1,
+        "likes": 20,
+        "commentId": 13
+      }
+    ]
+  }
+}
