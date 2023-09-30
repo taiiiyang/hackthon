@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 // 每个坑位，传入占用状态和占用时间
-import { ref, defineProps } from 'vue';
+import { ref } from 'vue';
 
 defineProps({
   status: {
@@ -27,6 +27,7 @@ defineProps({
   },
 });
 
+// 坑位尺寸
 const size = ref('1.2rem');
 </script>
 
@@ -42,9 +43,9 @@ const size = ref('1.2rem');
       width: 100%;
       text-align: center;
       position: absolute;
-      bottom: 0.25rem;
+      bottom: 0.23rem;
       background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 0.09rem;
+      border-radius: 0.19rem;
       font-size: 0.2rem;
       color: rgba(0, 0, 0, 0.8);
     }

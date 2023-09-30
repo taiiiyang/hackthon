@@ -1,33 +1,30 @@
 <template>
   <div class="tab-wrapper">
-		<van-tabbar v-model="active">
-    <van-tabbar-item icon="home-o" @click="toggleRoute('toilet')">
-      找厕所
-    </van-tabbar-item>
-    <van-tabbar-item icon="search" @click="toggleRoute('talk')">
-      吐槽室
-    </van-tabbar-item>
-    <van-tabbar-item icon="friends-o" @click="toggleRoute('logistic')">
-      管理中心
-    </van-tabbar-item>
-  </van-tabbar>
-	</div>
+    <van-tabbar route placeholder>
+      <van-tabbar-item
+        replace
+        :to="`/${route.name}`"
+        v-for="route in routerMap"
+        :key="route.name"
+      >
+        <span>{{ route.title }}</span>
+        <template #icon="props">
+          <svg-icon
+            :name="
+              props.active ? `${route.name}-tab-click` : `${route.name}-tab`
+            "
+          ></svg-icon>
+        </template>
+      </van-tabbar-item>
+    </van-tabbar>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-const active = ref(0);
-
-const toggleRoute = (path: string) => {
-  router.push(path);
-};
+const routerMap = ref([
+  { name: 'toilet', title: '找厕所' },
+  { name: 'talk', title: '吐槽室' },
+  { name: 'logistic', title: '管理中心' },
+]);
 </script>
-
-<style scoped lang="scss">
-.tab-wrapper {
-	height: 1.33333rem;
-}
-</style>

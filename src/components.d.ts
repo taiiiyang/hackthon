@@ -15,6 +15,7 @@ declare module 'vue' {
     Layout: typeof import('./components/layout/index.vue')['default']
     Login: typeof import('./components/login.vue')['default']
     Logistic: typeof import('./views/logistic/index.vue')['default']
+    LogisticHome: typeof import('./views/logistic/logistic-home.vue')['default']
     LogisticList: typeof import('./components/logistic/logistic-list.vue')['default']
     MaintainTitle: typeof import('./components/logistic/maintain-title.vue')['default']
     MenToilet: typeof import('./views/toilet/men-toilet/index.vue')['default']
@@ -40,6 +41,7 @@ declare module 'vue' {
     VanPopup: typeof import('vant/es')['Popup']
     VanTabbar: typeof import('vant/es')['Tabbar']
     VanTabbarItem: typeof import('vant/es')['TabbarItem']
+    VanUploader: typeof import('vant/es')['Uploader']
     WomenToilet: typeof import('./views/toilet/women-toilet/index.vue')['default']
   }
 }

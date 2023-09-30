@@ -13,11 +13,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/components/layout/index.vue'),
     redirect: '/toilet',
     children: [
-			{
-				path: '/login',
-				name: 'login',
-				component: () => import('@/components/login.vue'),
-			},
+      {
+        path: '/login',
+        name: 'login',
+        component: () => import('@/components/login.vue'),
+      },
       {
         path: '/toilet',
         name: 'toilet',
@@ -26,33 +26,41 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/logistic',
         name: 'logistic',
+        redirect: '/logistic/home',
         component: () => import('@/views/logistic/index.vue'),
+        children: [
+          {
+            path: '/logistic/home',
+            name: 'logistic-home',
+            component: () => import('@/views/logistic/logistic-home/index.vue'),
+          },
+          {
+            path: '/logistic/repair',
+            name: 'repair',
+            component: () => import('@/views/logistic/repair/index.vue'),
+          },
+          {
+            path: '/logistic/help',
+            name: 'help',
+            component: () => import('@/views/logistic/help/index.vue'),
+          },
+          {
+            path: '/logistic/info',
+            name: 'info',
+            component: () => import('@/views/logistic/info/index.vue'),
+          },
+          {
+            path: '/logistic/introduction',
+            name: 'introduction',
+            component: () => import('@/views/logistic/introduction/index.vue'),
+          },
+        ],
       },
       {
         path: '/talk',
         name: 'talk',
         component: () => import('@/views/talk/index.vue'),
       },
-      {
-        path: '/repair',
-        name: 'repair',
-        component: () => import('@/views/logistic/repair/index.vue')
-      },
-      {
-        path: '/help',
-        name: 'help',
-        component: () => import('@/views/logistic/help/index.vue')
-      },
-      {
-        path: '/info',
-        name: 'info',
-        component: () => import('@/views/logistic/info/index.vue')
-      },
-      {
-        path: '/introduction',
-        name: 'introduction',
-        component: () => import('@/views/logistic/introduction/index.vue')
-      }
     ],
   },
 ];
