@@ -13,6 +13,7 @@ declare type UserInfo = {
   gender: 0 | 1;
   floor: number;
   userId: number;
+  role: string;
 };
 
 // 分页统一响应体

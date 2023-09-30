@@ -2,20 +2,23 @@ import { showNotify, showLoadingToast, closeToast } from 'vant';
 import { InternalAxiosRequestConfig, AxiosResponse } from 'axios';
 import type { ApiResponse } from './types';
 
+let isLoading = true;
 export const requestInterceptor = (config: InternalAxiosRequestConfig) => {
-  showLoadingToast({
-    forbidClick: true,
-    message: '请求加载中',
-  });
+  if (typeof config.isLoading === 'boolean') {
+    isLoading = config.isLoading;
+  }
+  isLoading &&
+    showLoadingToast({
+      forbidClick: true,
+      message: '请求加载中',
+    });
   config.headers.authorization = '';
   return config;
 };
 
 export const responseInterceptor = (response: AxiosResponse<ApiResponse>) => {
-  closeToast();
+  isLoading && closeToast();
   if (response.data.rspCode === 200) {
-    console.log('response', response);
-    showLoadingToast;
     return response.data;
   } else {
     showNotify({

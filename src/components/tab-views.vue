@@ -7,7 +7,6 @@
         v-for="route in routerMap"
         :key="route.name"
       >
-        <span>{{ route.title }}</span>
         <template #icon="props">
           <svg-icon
             :name="

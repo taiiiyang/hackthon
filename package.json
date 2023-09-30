@@ -16,6 +16,7 @@
     "axios": "^1.5.0",
     "css-loader": "^6.8.1",
     "danmaku-vue": "^1.0.2",
+    "dayjs": "^1.11.10",
     "pinia": "^2.1.6",
     "postcss": "^8.4.30",
     "postcss-loader": "^7.3.3",

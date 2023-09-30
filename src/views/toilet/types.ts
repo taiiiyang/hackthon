@@ -1,25 +1,23 @@
-type Gender = 'men' | 'women';
+export type Gender = 0 | 1;
 
 // 每个坑位的占用信息
 export type CellInfo = {
   id: number; // 厕所id
-  type: boolean; // 占用状态
+  status: number; // 占用状态
   time: string; // 占时
   floor: number; // 楼层
-  gender: Gender; // 性别
-  location: number; // 坑位
+  order: number; // 坑位
 };
 
 // 每层楼
-export type FloorInfo = {
-  man: [CellInfo, CellInfo, CellInfo];
-  women: [CellInfo, CellInfo, CellInfo];
+export type FloorInfo = [CellInfo, CellInfo, CellInfo];
+
+export type WholeFloor = {
+  [propName: string]: FloorInfo;
 };
 
-export type WholeFloor = Array<FloorInfo>;
-
-export interface UserInfo {
-  gender: Gender;
-  floor: number;
-  userName: string;
+export enum PIT_STATUS {
+  '空闲' = 1,
+  '占用' = 2,
+  '故障' = 3,
 }

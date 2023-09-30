@@ -14,8 +14,21 @@ const request = axios.create({
 request.interceptors.request.use(requestInterceptor);
 request.interceptors.response.use(responseInterceptor);
 
-export const getApi = <T>(url: string, params?: object) =>
-  request.get<T>(url, params);
+export const getApi = <T>(
+  url: string,
+  params?: { [propName: string]: any },
+  opt?: object,
+) => {
+  // let query = '';
+  // if (params) {
+  //   query = Object.keys(params)
+  //     .map((key) => `${key}=${params[key]}`)
+  //     .join('&');
+  // }
+  // if (query) return request.get<T>(`${url}?${query}`, opt);
+  // else return request.get<T>(url, opt);
+  return request.get<T>(url, opt);
+};
 
-export const postApi = <T>(url: string, params?: object) =>
-  request.get<T>(url, params);
+export const postApi = <T>(url: string, params?: object, opt?: object) =>
+  request.post<T>(url, params, opt);
