@@ -30,6 +30,8 @@
 
 <style lang="scss" scoped>
 .logistic-container {
+  height: 100%;
+  flex-grow: 1;
   .logistic-title {
     margin: 0px auto 0;
     text-align: center;

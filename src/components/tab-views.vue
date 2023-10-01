@@ -32,9 +32,3 @@ const routerMap = ref([
   { name: logisticPath, title: '管理中心', icon: 'logistic-tab' },
 ]);
 </script>
-
-<style scoped lang="scss">
-.tab-wrapper {
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-}
-</style>
