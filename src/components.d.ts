@@ -7,6 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Admin: typeof import('./views/admin/index.vue')['default']
+    AdminTabViews: typeof import('./views/admin/admin-tab-views/index.vue')['default']
+    BreakdownDetail: typeof import('./views/admin/breakdown-detail/index.vue')['default']
+    BreakdownEdit: typeof import('./views/admin/breakdown-list/breakdown-edit.vue')['default']
+    BreakdownItem: typeof import('./views/admin/breakdown-list/breakdown-item.vue')['default']
+    BreakdownList: typeof import('./views/admin/breakdown-list/index.vue')['default']
     FloorPicker: typeof import('./components/picker/floor-picker.vue')['default']
     GenderPicker: typeof import('./components/picker/gender-picker.vue')['default']
     Help: typeof import('./views/logistic/help/index.vue')['default']
@@ -20,6 +26,7 @@ declare module 'vue' {
     MaintainTitle: typeof import('./components/logistic/maintain-title.vue')['default']
     MenFloor: typeof import('./views/toilet/men-toilet/men-floor.vue')['default']
     MenToilet: typeof import('./views/toilet/men-toilet/index.vue')['default']
+    PageHeader: typeof import('./components/page-header.vue')['default']
     Pit: typeof import('./views/toilet/pit.vue')['default']
     PopupPicker: typeof import('./components/logistic/popup-picker.vue')['default']
     Repair: typeof import('./views/logistic/repair/index.vue')['default']
@@ -34,6 +41,7 @@ declare module 'vue' {
     Toilet: typeof import('./views/toilet/index.vue')['default']
     VanBadge: typeof import('vant/es')['Badge']
     VanButton: typeof import('vant/es')['Button']
+    VanDialog: typeof import('vant/es')['Dialog']
     VanField: typeof import('vant/es')['Field']
     VanIcon: typeof import('vant/es')['Icon']
     VanImage: typeof import('vant/es')['Image']
@@ -42,6 +50,7 @@ declare module 'vue' {
     VanPopup: typeof import('vant/es')['Popup']
     VanTabbar: typeof import('vant/es')['Tabbar']
     VanTabbarItem: typeof import('vant/es')['TabbarItem']
+    VanTabber: typeof import('vant/es')['Tabber']
     VanUploader: typeof import('vant/es')['Uploader']
     WomenFloor: typeof import('./views/toilet/women-toilet/women-floor.vue')['default']
     WomenToilet: typeof import('./views/toilet/women-toilet/index.vue')['default']

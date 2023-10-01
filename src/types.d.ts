@@ -13,14 +13,16 @@ declare type UserInfo = {
   gender: 0 | 1;
   floor: number;
   userId: number;
-  role: string;
+  role: number;
 };
 
 // 分页统一响应体
-declare type FenyeResponse<T> = {
+declare type PaginationResponse<T> = {
   pageSize: number;
   pageNum: number;
   total: number;
   totalPage: number;
   data: T;
 };
+
+declare module legoPhotoPreview {}

@@ -8,6 +8,7 @@ export const useUserStore = defineStore('userInfo', {
       this.gender = userInfo.gender;
       this.floor = userInfo.floor;
       this.userId = userInfo.userId;
+      this.role = userInfo.role;
     },
     setUserId(userId: number) {
       this.userId = userId;

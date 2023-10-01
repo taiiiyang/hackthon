@@ -68,7 +68,8 @@ const onLoad = async () => {
   try {
     error.value = false;
     loading.value = true;
-    const res = await api.getComments<FenyeResponse<Comment[]>>(pagination);
+    const res =
+      await api.getComments<PaginationResponse<Comment[]>>(pagination);
     const newComment = res.data.data;
     pagination.pageNum += 1;
     comments.value.push(...newComment);
@@ -78,6 +79,7 @@ const onLoad = async () => {
     }
   } catch (e) {
     error.value = true;
+    loading.value = false;
     return false;
   }
 };

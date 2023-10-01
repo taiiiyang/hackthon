@@ -12,11 +12,13 @@
     "mock": "anywhere --proxy http://localhost:8000/api -d ./mock"
   },
   "dependencies": {
+    "alloyfinger": "^0.1.16",
     "autoprefixer": "^10.4.16",
     "axios": "^1.5.0",
     "css-loader": "^6.8.1",
     "danmaku-vue": "^1.0.2",
     "dayjs": "^1.11.10",
+    "lego-photo-preview": "^1.0.0",
     "pinia": "^2.1.6",
     "postcss": "^8.4.30",
     "postcss-loader": "^7.3.3",

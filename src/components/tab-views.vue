@@ -9,9 +9,7 @@
       >
         <template #icon="props">
           <svg-icon
-            :name="
-              props.active ? `${route.name}-tab-click` : `${route.name}-tab`
-            "
+            :name="props.active ? `${route.icon}-click` : `${route.icon}`"
           ></svg-icon>
         </template>
       </van-tabbar-item>
@@ -21,9 +19,22 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useUserStore } from '@/store/user';
+
+const userStore = useUserStore();
+const role = ref(userStore.role);
+
+const logisticPath = role.value === 0 ? 'logistic' : 'admin';
+
 const routerMap = ref([
-  { name: 'toilet', title: '找厕所' },
-  { name: 'talk', title: '吐槽室' },
-  { name: 'logistic', title: '管理中心' },
+  { name: 'toilet', title: '找厕所', icon: 'toilet-tab' },
+  { name: 'talk', title: '吐槽室', icon: 'talk-tab' },
+  { name: logisticPath, title: '管理中心', icon: 'logistic-tab' },
 ]);
 </script>
+
+<style scoped lang="scss">
+.tab-wrapper {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+</style>

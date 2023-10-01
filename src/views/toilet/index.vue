@@ -1,6 +1,6 @@
 <template>
   <div class="toilet-container">
-    <div class="toilet-header">找厕所</div>
+    <page-header title="找厕所"></page-header>
     <div class="toilet-content">
       <span class="tip">
         为您优先展示
@@ -27,6 +27,8 @@ const userStore = useUserStore();
 const userId = ref(0);
 const gender = ref(0); // 先假定男性
 const floor = ref(0);
+const role = ref(0);
+
 let toiletInfo = reactive<WholeFloor>({});
 
 const getToiletList = async () => {
@@ -63,6 +65,7 @@ onMounted(async () => {
       userStore.setUserInfo(userInfoRes.data);
       gender.value = userStore.gender;
       floor.value = userStore.floor;
+      role.value = userStore.role;
     }
     // 确保已经获取了用户信息，去套取厕所信息
     await getToiletList();
@@ -92,16 +95,6 @@ onUnmounted(() => {
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
-  .toilet-header {
-    display: flex;
-    margin-top: 0.1rem;
-    justify-content: center;
-    text-align: 15px;
-    font-weight: bold;
-    font-size: 0.5rem;
-    color: var(--main-color);
-  }
-
   .toilet-content {
     flex: auto;
     padding: 0.3rem;

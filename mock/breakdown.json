@@ -1,0 +1,80 @@
+{
+  "rspCode": 200,
+  "rspDesc": "",
+  "data": [
+    {
+      "gender": 1,
+      "info": "小便池漏水",
+      "imgList": [
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+      ],
+      "equipment": "洗手池故障",
+      "status": "WAIT_PROCESS",
+      "id": 111,
+      "floor": 10,
+      "pit": 1,
+      "tmCreate": "2023:10:02 15:07"
+    },
+    {
+      "gender": 1,
+      "info": "小便池漏水",
+      "imgList": [
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+      ],
+      "equipment": "洗手池故障",
+      "status": "PROCESSING",
+      "id": 112,
+      "floor": 9,
+      "pit": 1,
+      "tmCreate": "2023:10:02 15:07"
+    },
+    {
+      "gender": 0,
+      "info": "小便池漏水",
+      "imgList": [
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+      ],
+      "equipment": "洗手池故障",
+      "status": "DONE",
+      "id": 113,
+      "floor": 8,
+      "pit": 2,
+      "tmCreate": "2023:10:02 15:07"
+    },
+    {
+      "gender": 1,
+      "info": "小便池漏水",
+      "imgList": [
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+      ],
+      "equipment": "洗手池故障",
+      "status": "WAIT_PROCESS",
+      "id": 114,
+      "floor": 11,
+      "pit": 3,
+      "tmCreate": "2023:10:02 15:07"
+    },
+    {
+      "gender": 0,
+      "info": "小便池漏水",
+      "imgList": [
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+        "https://ts3.cn.mm.bing.net/th?id=OIP-C.6szqS1IlGtWsaiHQUtUOVwHaQC&w=161&h=349&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+      ],
+      "equipment": "洗手池故障",
+      "status": "WAIT_PROCESS",
+      "id": 115,
+      "floor": 12,
+      "tmCreate": "2023:10:02 15:07"
+    }
+  ]
+}

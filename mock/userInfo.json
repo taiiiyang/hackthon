@@ -3,7 +3,7 @@
   "rspDesc": "success",
   "data": {
     "gender": 0,
-    "role": "admin",
+    "role": 0,
     "floor": 10,
     "userId": 1111
   }

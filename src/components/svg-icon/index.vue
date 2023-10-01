@@ -5,6 +5,7 @@ import { log } from 'console';
     class="svg-icon"
     :width="props.size"
     :height="props.size"
+    :style="props.style"
   >
     <use :xlink:href="symbolId" :fill="props.color" />
   </svg>
@@ -28,6 +29,9 @@ const props = defineProps({
   size: {
     type: String,
     default: '1em',
+  },
+  style: {
+    type: String,
   },
 });
 const symbolId = computed(() => `#${props.prefix}-${props.name}`);

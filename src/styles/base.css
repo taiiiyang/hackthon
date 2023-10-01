@@ -5,3 +5,8 @@
   --van-badge-color: #6478d3;
   --van-badge-background: transparent;
 }
+
+/* 图片预览 */
+.preview {
+  z-index: 99999 !important;
+}

@@ -31,7 +31,6 @@ defineProps<props>();
       display: flex;
       justify-content: space-around;
     }
-
     .floor:last-child > .floor-wrapper {
       margin-bottom: 0rem;
     }
@@ -51,7 +50,7 @@ defineProps<props>();
     padding-left: 0.1rem;
     span {
       margin-top: 0.1rem;
-      font-size: 0.18rem;
+      font-size: 0.1rem;
       text-align: center;
     }
   }

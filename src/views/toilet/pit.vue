@@ -1,16 +1,8 @@
 <template>
   <div class="pit-wrapper">
     <div class="pit-content">
-      <svg-icon
-        name="toilet-leisure"
-        :size="size"
-        v-if="status === 1"
-      ></svg-icon>
-      <svg-icon
-        name="toilet-occupy"
-        :size="size"
-        v-else-if="status === 2"
-      ></svg-icon>
+      <svg-icon name="toilet-leisure" :size="size" v-if="status === 1"></svg-icon>
+      <svg-icon name="toilet-occupy" :size="size" v-else-if="status === 2"></svg-icon>
       <svg-icon name="toilet-breakdown" :size="size" v-else></svg-icon>
       <span class="pit-time" v-if="status === 2">{{ times }}</span>
       <span class="status">{{ PIT_STATUS[status] }}</span>
@@ -33,7 +25,7 @@ const props = defineProps({
   },
 });
 
-const size = ref('1.2rem'); // 坑位尺寸
+const size = ref('1rem'); // 坑位尺寸
 const times = ref(props.time);
 let timer: NodeJS.Timeout; // 定时器
 // 时间格式化
@@ -69,7 +61,6 @@ const moveTime = () => {
     const newTime = times.value;
     if (newTime) {
       let [hour, minute, second] = newTime.split(':');
-      console.log(newTime, 'newTime');
       if (Number(second) + 1 >= 60) {
         minute = (Number(minute) + 1).toString();
         second = '00';
