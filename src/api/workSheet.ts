@@ -5,7 +5,7 @@ export default {
   submitWorkSheet: (params: WorkSheet) => {
     return postApi('api/workSheet.json', params);
   },
-  submitHelpSheet: (params:{floor:number,type:string})=>{
-    return postApi('api/helpSheet.json',params)
-  }
+  submitHelpSheet: (params: { floor: number; type: string }) => {
+    return postApi('api/helpSheet.json', params);
+  },
 };

@@ -7,5 +7,5 @@ export default {
   updateUserInfo: (params: Omit<UserInfo, 'role'>) =>
     postApi('/api/userInfo.json', params),
   // 注册
-  login: (params: Omit<UserInfo, 'role'>) => postApi('/api/login.json', params),
+  login: (params: Omit<UserInfo, 'role'>) => getApi<UserInfo>('/api/login.json', params),
 };

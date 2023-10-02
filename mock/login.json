@@ -1,10 +1,10 @@
 {
-	"rspCode": 200,
-	"rspDesc": "success",
-	"data": {
-		"userId": "10086",
-		"gender": 1,
-		"role": "admin",
-		"floor": 10
-	}
+  "rspCode": 200,
+  "rspDesc": "success",
+  "data": {
+    "userId": 10086,
+    "gender": 1,
+    "role": "admin",
+    "floor": 10
+  }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="logistic-container">
-    <div class="logistic-title">管理中心</div>
+    <page-header title="管理中心"></page-header>
     <div class="logistic-content">
       <logistic-list
         title="在线修理工"

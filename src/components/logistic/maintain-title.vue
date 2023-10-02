@@ -31,7 +31,3 @@ const backToLogistic = () => {
   color: var(--main-color);
 }
 </style>
-
-
-
-

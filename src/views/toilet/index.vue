@@ -58,7 +58,7 @@ onMounted(async () => {
     userId.value = mockId;
     const userInfoRes = await userApi.getUserInfo({ userId: mockId });
     if (!userInfoRes.data) {
-      router.push({ path: '/login' });
+      router.push({ path: '/pre-login' });
       return; // 退出函数
     } else {
       // 根据返回值去设置用户数据

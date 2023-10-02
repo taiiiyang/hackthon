@@ -21,10 +21,7 @@ export const responseInterceptor = (response: AxiosResponse<ApiResponse>) => {
   if (response.data.rspCode === 200) {
     return response.data;
   } else {
-    showNotify({
-      type: 'danger',
-      message: response.data.rspDesc,
-    });
+    showNotify({ type: 'danger', message: response.data.rspDesc });
     return Promise.reject(new Error(response.data.rspDesc));
   }
 };

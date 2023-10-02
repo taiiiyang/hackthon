@@ -2,9 +2,9 @@
   "rspCode": 200,
   "rspDesc": "success",
   "data": {
-    "gender": 0,
+    "userId": 10086,
+    "gender": 1,
     "role": 0,
-    "floor": 10,
-    "userId": 1111
+    "floor": 10
   }
 }

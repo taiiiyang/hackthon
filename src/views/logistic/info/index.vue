@@ -1,12 +1,14 @@
 <template>
-  <maintain-title style="width: 85%" :title="title"></maintain-title>
+  <maintain-title style="width: 85%" title="修改信息"></maintain-title>
   <gender-picker
     style="width: 80%; margin-top: 45px"
     @gender-pick="genderPick"
+    mode="update"
   ></gender-picker>
   <floor-picker
     style="width: 80%; margin: 50px auto 0"
     @floor-change="floorChange"
+    mode="update"
   ></floor-picker>
   <div class="submit-area">
     <div>优先为您展示合适的厕所</div>
@@ -19,13 +21,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useUserStore } from '@/store/user';
-import { PickerOption } from 'vant';
+import { useRouter } from 'vue-router';
+import { PickerOption, showNotify } from 'vant';
 import userInfo from '@/api/userInfo.ts';
 
-defineProps<{
-  title: string;
-}>();
 const userStore = useUserStore();
+const router = useRouter();
+// 编辑信息的时候需要从store获取
 const gender = ref(userStore.gender);
 const floor = ref(userStore.floor);
 
@@ -36,12 +38,19 @@ const genderPick = (g: 0 | 1) => {
 const floorChange = (pickItem: PickerOption) => {
   floor.value = <number>pickItem.value ? <number>pickItem.value : userStore.floor;
 };
-const submit = () => {
-  userInfo.updateUserInfo({
-    userId: userStore.userId,
-    floor: floor.value,
-    gender: gender.value,
-  });
+
+const submit = async () => {
+  try {
+    await userInfo.updateUserInfo({
+      userId: userStore.userId,
+      floor: floor.value,
+      gender: gender.value,
+    });
+    showNotify({ type: 'success', message: '信息修改成功！' });
+    router.push('/logistic'); // 返回管理页
+  } catch (e) {
+    return false;
+  }
 };
 </script>
 

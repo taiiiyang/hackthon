@@ -4,7 +4,7 @@
       <van-tabbar-item
         replace
         :to="`/${route.name}`"
-        v-for="route in routerMap"
+        v-for="route in routerMap" 
         :key="route.name"
       >
         <template #icon="props">

@@ -22,17 +22,17 @@ import api from '../api';
 
 const danmakuRef = ref<InstanceType<typeof Danmaku>>(null);
 
-const danmus = ref<string[]>(['']);
+const danmus = ref<string[]>([]);
 
 onMounted(async () => {
   const res = await api.getDanmu<string[]>();
   // 触发刷新
-  danmus.value = [];
-  danmus.value = res.data;
-});
+  danmus.value = [''];
 
-nextTick(() => {
-  danmakuRef.value.play();
+  nextTick(() => {
+    danmus.value = res.data;
+    danmakuRef.value.play();
+  });
 });
 
 const extraStyle = ref(

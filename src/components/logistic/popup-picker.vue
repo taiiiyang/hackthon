@@ -3,7 +3,7 @@
     <div class="picker-label">{{ label }}</div>
     <van-field
       v-model="pickItem.text"
-      required
+      :rules="[{ required: true, message: `${label}必选` }]"
       readonly
       :placeholder="placeholder"
       @click="showPicker = true"
@@ -44,9 +44,7 @@ let pickItem = reactive<PickerOption>({
 });
 
 const pickConfirm = ({ selectedOptions }: PickerConfirmEventParams) => {
-  pickItem = selectedOptions[0]
-    ? selectedOptions[0]
-    : { text: '1楼', value: 1 };
+  pickItem = selectedOptions[0] ? selectedOptions[0] : { text: '1楼', value: 1 };
   showPicker.value = false;
   emit('pickConfirm', pickItem);
 };
@@ -64,8 +62,13 @@ const pickConfirm = ({ selectedOptions }: PickerConfirmEventParams) => {
     content: '*';
   }
   :deep(.van-cell) {
+    padding: 0;
+  }
+
+  :deep(.van-field__body) {
+    /* 边框显示在正确的位置，防止校验的提示出现在错误的地方 */
     font-size: 12px;
-    border: 2px solid var(--main-color);
+    border: 0.05333rem solid var(--main-color);
     padding: 2px 0 2px 6px;
     border-radius: 8px;
   }

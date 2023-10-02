@@ -2,7 +2,7 @@
 import { PickerOption } from 'vant';
 
 export type WorkSheet = {
-  userId: string;
+  userId: number;
   floor: number;
   equip: string;
   info: string;

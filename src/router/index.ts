@@ -5,6 +5,7 @@ import {
   Router,
   RouteRecordRaw,
 } from 'vue-router';
+import routerInterceptor from '@/common/routerInterceptor';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -13,11 +14,6 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/components/layout/index.vue'),
     redirect: '/toilet',
     children: [
-      {
-        path: '/login',
-        name: 'login',
-        component: () => import('@/components/login.vue'),
-      },
       {
         path: '/toilet',
         name: 'toilet',
@@ -68,6 +64,16 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
+  {
+    path: '/pre-login',
+    name: 'pre-login',
+    component: () => import('@/components/pre-login.vue'),
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/components/login.vue'),
+  },
 ];
 
 // RouterOptions是路由选项类型
@@ -79,4 +85,5 @@ const options: RouterOptions = {
 // Router是路由对象类型
 const router: Router = createRouter(options);
 
+// router.beforeEach(routerInterceptor);
 export default router;

@@ -6,7 +6,7 @@
   "author": "谢祥辉",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "update": "git add . && git commit -m 'update' && git push",
     "preview": "vite preview",
     "mock": "anywhere --proxy http://localhost:8000/api -d ./mock"
